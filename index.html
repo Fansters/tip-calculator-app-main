@@ -9,9 +9,48 @@
 	</head>
 	<body>
 		<main>
-			<section></section>
+			<section>
+				<div>
+					<img src="images/logo.svg" alt="SPLITTER" />
+				</div>
+				<div class="split__container">
+					<div class="split__inner">
+						<div class="bill__calc">
+							<div class="bill__input_cont">
+								<label for="billAmount">Bill</label>
+								<input type="text" id="billAmount" />
+							</div>
+							<div class="tip__perc_cont">
+								<label for="percentage">Select Tip %</label>
+								<input type="button" value="5" class="button" id="percentage" onClick="display('5%')" />
+								<input type="button" value="10" class="button" onClick="display('10%')" />
+								<input type="button" value="15" class="button" onClick="display('15%')" />
+								<input type="button" value="25" class="button" onClick="display('25%')" />
+								<input type="button" value="50" class="button" onClick="display('50%')" />
+								<input type="text" class="button" />
+							</div>
+							<label for="nrOfPpl">Number of People</label>
+							<input type="text" id="nrOfPpl" />
+						</div>
+						<div class="bill__result">
+							<div class="bill__result_inner">
+								<div class="tipAmountPerson">
+									<p class="bill__tipAmount">Tip amount</p>
+                           <p class="perPerson">/ person</p>
+								</div>
+                        <p class="perPerson">0.00</p>
+								<div class="amountPerson">
+                           <p class="bill__tipAmount">Total</p>
+                           <p class="perPerson">/ person</p>
+								</div>
+                        <p class="perPerson">0.00</p>
+                        <button type="reset">RESET</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
-		Bill Select Tip % 5% 10% 15% 25% 50% Custom Number of People Tip Amount / person Total / person Reset
 
 		<div class="attribution">
 			Coded by <br />
