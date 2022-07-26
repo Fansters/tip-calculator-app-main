@@ -1,0 +1,25 @@
+/* CREDITS */
+.attribution {
+	position: absolute;
+	bottom: 1.25rem;
+	left: 50%;
+	transform: translateX(-50%);
+}
+a,
+a:visited {
+	text-decoration: none;
+	color: #2196f3;
+	transition: color 0.2s ease-in-out;
+}
+a:hover {
+	color: tomato;
+}
+
+/* @media only screen and (min-width: 500px) {
+} */
+
+/* @media only screen and (min-width: 768px) {} */
+
+/* @media only screen and (min-width: 992px) {} */
+
+/* @media only screen and (min-width: 1200px) {} */
