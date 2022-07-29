@@ -1,3 +1,113 @@
+:root {
+	--strongCyan: hsl(172, 67%, 45%);
+	--veryDarkCyan: hsl(183, 100%, 15%);
+	--darkGrayishCyan: hsl(186, 14%, 43%);
+	--grayishCyan: hsl(184, 14%, 56%);
+	--lightGrayishCyan: hsl(185, 41%, 84%);
+	--veryLightGrayishCyan: hsl(189, 41%, 97%);
+	--white: hsl(0, 0%, 100%);
+	--fontInputs: 1.5rem;
+}
+
+html {
+	font-size: 100%;
+	box-sizing: border-box;
+	overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	background-color: var(--lightGrayishCyan);
+	margin: 0;
+	padding: 0;
+	position: relative;
+	font-family: "Space Mono", monospace;
+
+	font-size: 1rem;
+}
+section {
+	margin-top: 3.125rem;
+}
+.logo {
+	text-align: center;
+	margin-bottom: 2.5rem;
+}
+.split__container {
+	background-color: var(--white);
+	padding: 2.375rem 2.375rem 2rem;
+	border-radius: 20px 20px 0 0;
+	height: calc(100vh);
+}
+.split__bill {
+	display: block;
+	color: var(--darkGrayishCyan);
+}
+
+#billAmount{
+   border:none;
+   background-color: var(--veryLightGrayishCyan);
+   padding:.375rem .75rem;
+   width: 100%;
+   background-image: url(/images/icon-dollar.svg);
+   background-repeat: no-repeat;
+   background-position: 1rem center;
+   text-align: right;
+   color: var(--veryDarkCyan);
+   font-size: var(--fontInputs);
+   border-radius: 4px;
+   font-weight: 700;
+   font-family: "Space Mono", monospace;
+}
+#billAmount:focus-visible{
+   outline: 2px solid  var(--strongCyan);
+}
+
+.tip__perc_cont{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+
+.select__tip{
+   display: block;
+   width: 100%;
+   color: var(--darkGrayishCyan);
+}
+
+.tip__perc_cont .button,
+.tip__perc_cont .customBtn{
+   /* flex-grow: 1; */
+   border: none;
+   min-width: 8.75rem;
+   margin-bottom: 1rem;
+}
+.tip__perc_cont .button{
+   background-color: var(--veryDarkCyan);
+   padding:.375rem .75rem;
+   color: var(--white);
+   text-align: center;
+   font-size: var(--fontInputs);
+   border-radius: 4px;
+   font-weight: normal;
+   font-family: "Space Mono", monospace;
+
+}
+.tip__perc_cont .customBtn{
+   display: inline;
+   background-color: var(--veryLightGrayishCyan);
+   padding:.375rem .75rem;
+   text-align: right;
+   color: var(--darkGrayishCyan);
+   font-size: var(--fontInputs);
+   border-radius: 4px;
+   font-weight: 700;
+   font-family: "Space Mono", monospace;
+}
 /* CREDITS */
 .attribution {
 	position: absolute;

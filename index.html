@@ -5,57 +5,60 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="style.css" />
 		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet" />
 		<title>Frontend Mentor | Tip calculator app</title>
 	</head>
 	<body>
 		<main>
 			<section>
-				<div>
+				<div class="logo">
 					<img src="images/logo.svg" alt="SPLITTER" />
 				</div>
 				<div class="split__container">
 					<div class="split__inner">
 						<div class="bill__calc">
 							<div class="bill__input_cont">
-								<label for="billAmount">Bill</label>
+								<label for="billAmount" class="split__bill">Bill</label>
 								<input type="text" id="billAmount" />
 							</div>
 							<div class="tip__perc_cont">
-								<label for="percentage">Select Tip %</label>
-								<input type="button" value="5" class="button" id="percentage" onClick="display('5%')" />
-								<input type="button" value="10" class="button" onClick="display('10%')" />
-								<input type="button" value="15" class="button" onClick="display('15%')" />
-								<input type="button" value="25" class="button" onClick="display('25%')" />
-								<input type="button" value="50" class="button" onClick="display('50%')" />
-								<input type="text" class="button" />
+								<label for="percentage" class="select__tip">Select Tip %</label>
+								<input type="button" value="5%" class="button" id="percentage" onClick="display('5%')" />
+								<input type="button" value="10%" class="button" onClick="display('10%')" />
+								<input type="button" value="15%" class="button" onClick="display('15%')" />
+								<input type="button" value="25%" class="button" onClick="display('25%')" />
+								<input type="button" value="50%" class="button" onClick="display('50%')" />
+								<input type="text" class="customBtn" placeholder="Custom" />
 							</div>
-							<label for="nrOfPpl">Number of People</label>
+							<label for="nrOfPpl" class="nrOfPpl">Number of People</label>
 							<input type="text" id="nrOfPpl" />
 						</div>
 						<div class="bill__result">
 							<div class="bill__result_inner">
 								<div class="tipAmountPerson">
 									<p class="bill__tipAmount">Tip amount</p>
-                           <p class="perPerson">/ person</p>
+									<p class="perPerson">/ person</p>
 								</div>
-                        <p class="perPerson">0.00</p>
+								<p class="perPerson">0.00</p>
 								<div class="amountPerson">
-                           <p class="bill__tipAmount">Total</p>
-                           <p class="perPerson">/ person</p>
+									<p class="bill__tipAmount">Total</p>
+									<p class="perPerson">/ person</p>
 								</div>
-                        <p class="perPerson">0.00</p>
-                        <button type="reset">RESET</button>
+								<p class="perPerson">0.00</p>
+								<button type="reset">RESET</button>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
 		</main>
-
-		<div class="attribution">
-			Coded by <br />
-			<a href="https://www.frontendmentor.io/profile/Fansters">Fansters</a>
-		</div>
+      <div class="attribution">
+         Coded by <br />
+         <a href="https://www.frontendmentor.io/profile/Fansters">Fansters</a>
+      </div>
+   </footer>
 		<script src="script.js"></script>
 	</body>
 </html>
