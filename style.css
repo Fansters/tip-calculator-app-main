@@ -39,8 +39,8 @@ section {
 }
 .split__container {
 	background-color: var(--white);
-	padding: 2.375rem 2.375rem 2rem;
-	border-radius: 20px 20px 0 0;
+	padding: 2.375rem 1.5rem 6rem;
+	border-radius: 25px 25px 0 0;
 	height: 100%;
 }
 .split__bill,
@@ -69,7 +69,8 @@ section {
 	cursor: pointer;
 }
 #billAmount:focus-visible,
-.customBtn:focus-visible {
+.customBtn:focus-visible,
+#nrOfPpl:focus-visible {
 	outline: 2px solid var(--strongCyan);
 }
 
@@ -77,7 +78,7 @@ section {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	margin-bottom: 1rem;
+	margin-bottom: 1.25rem;
 }
 
 .select__tip {
@@ -89,9 +90,8 @@ section {
 
 .tip__perc_cont .button,
 .tip__perc_cont .customBtn {
-	/* flex-grow: 1; */
 	border: none;
-	min-width: 8.75rem;
+	min-width: 47%;
 	margin-bottom: 1rem;
 }
 .tip__perc_cont .button {
@@ -104,12 +104,13 @@ section {
 	font-weight: normal;
 	font-family: "Space Mono", monospace;
 }
+.tip__perc_cont input:nth-child(even) {
+	margin-right: 1rem;
+}
 .tip__perc_cont .button:hover {
 	cursor: pointer;
 }
-/* .tip__perc_cont .button:active {
-	background-color: var(--strongCyan);
-} */
+
 .tip__perc_cont .customBtn {
 	width: 8.75rem;
 	background-color: var(--veryLightGrayishCyan);
@@ -129,11 +130,42 @@ section {
 }
 
 /* TIP AMOUNT DISPLAY AND RESET */
-
-.bill__result_inner{
-   background-color: var(--veryDarkCyan);
-   padding: 2.625rem 1.5rem 1.5rem;
+.bill__result_inner {
+	background-color: var(--veryDarkCyan);
+	padding: 2.625rem 1.5rem 1.5rem;
+	border-radius: 15px;
 }
+.flex__cont {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 1.75rem;
+}
+.bill__tipAmount {
+	color: var(--white);
+	margin: 0;
+}
+.perPerson {
+	color: var(--grayishCyan);
+	margin: 0;
+	font-size: 0.875rem;
+}
+.perPersonSum {
+	font-size: 1.875rem;
+	margin: 0;
+	color: var(--strongCyan);
+}
+.resetBtn {
+   margin-top: .5rem;
+	border: none;
+	width: 100%;
+	padding: 0.4375rem 0;
+	background-color: var(--strongCyan);
+	color: var(--veryDarkCyan);
+	font-size: 1.375rem;
+	font-family: "Space Mono", monospace;
+	border-radius: 4px;
+}
+
 /* CREDITS */
 .attribution {
 	position: absolute;
@@ -151,6 +183,11 @@ a:hover {
 	color: tomato;
 }
 
+/* .tip__perc_cont .button:active {
+	background-color: var(--strongCyan);
+} */
+
+/* RESPONSIVE DESIGN */
 /* @media only screen and (min-width: 500px) {
 } */
 
