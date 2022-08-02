@@ -155,7 +155,7 @@ section {
 	color: var(--strongCyan);
 }
 .resetBtn {
-   margin-top: .5rem;
+	margin-top: 0.5rem;
 	border: none;
 	width: 100%;
 	padding: 0.4375rem 0;
@@ -169,7 +169,7 @@ section {
 /* CREDITS */
 .attribution {
 	position: absolute;
-	bottom: 1.25rem;
+	bottom: -5.25rem;
 	left: 50%;
 	transform: translateX(-50%);
 }
@@ -188,11 +188,55 @@ a:hover {
 } */
 
 /* RESPONSIVE DESIGN */
-/* @media only screen and (min-width: 500px) {
-} */
 
 /* @media only screen and (min-width: 768px) {} */
 
-/* @media only screen and (min-width: 992px) {} */
+@media only screen and (min-width: 992px) {
+   section{
+      margin-top: 10.125rem;
+   }
+   .logo{
+      margin-bottom: 5.4375rem;
+   }
+	.split__container {
+		height: 30rem;
+      max-width: 57.5rem;
+      margin: 0 auto;
+      border-radius: 25px;
+	}
+	.split__inner {
+		display: flex;
+		justify-content: space-around;
+	}
+	.bill__calc {
+		width: 25.8125rem;
+	}
+	.bill__result {
+		width: 25.8125rem;
+		height: 26.0625rem;
+	}
+	.bill__result_inner {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.tip__perc_cont input:nth-child(even) {
+		margin-right: 0;
+	}
+	.tip__perc_cont .button,
+	.tip__perc_cont .customBtn {
+		border: none;
+		min-width: 7.825rem;
+		margin-bottom: 1rem;
+	}
+	.tip__perc_cont {
+		justify-content: space-between;
+		margin-bottom: 1.25rem;
+	}
+	.tip__perc_cont .customBtn {
+		width: 7.825rem;
+	}
+}
 
 /* @media only screen and (min-width: 1200px) {} */
