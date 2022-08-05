@@ -20,20 +20,26 @@
 					<div class="split__inner">
 						<div class="bill__calc">
 							<div class="bill__input_cont">
-								<label for="billAmount" class="split__bill">Bill</label>
-								<input type="text" id="billAmount" placeholder="0" />
+								<form class="billF billForm" name="form1" action="#">
+									<label for="billAmount" class="split__bill">Bill</label>
+									<input type="text" id="billAmount" placeholder="0" name="test1" onchange="validateBill()" />
+								</form>
 							</div>
 							<div class="tip__perc_cont">
-								<label for="percentage" class="select__tip">Select Tip %</label>
-								<input type="button" value="5%" class="button" id="percentage" onClick="display('5%')" />
-								<input type="button" value="10%" class="button" onClick="display('10%')" />
-								<input type="button" value="15%" class="button" onClick="display('15%')" />
-								<input type="button" value="25%" class="button" onClick="display('25%')" />
-								<input type="button" value="50%" class="button" onClick="display('50%')" />
-								<input type="text" class="customBtn" placeholder="Custom" />
+								<form class="tipC tipCustom" name="form2" action="#">
+									<label for="percentage" class="select__tip">Select Tip %</label>
+									<input type="button" value="5%" class="button" id="percentage" onClick="display('5%')" />
+									<input type="button" value="10%" class="button" onClick="display('10%')" />
+									<input type="button" value="15%" class="button" onClick="display('15%')" />
+									<input type="button" value="25%" class="button" onClick="display('25%')" />
+									<input type="button" value="50%" class="button" onClick="display('50%')" />
+									<input type="text" id="customAmount" class="customBtn" placeholder="Custom" name="test2" />
+								</form>
 							</div>
-							<label for="nrOfPpl" class="nrOfPpl">Number of People</label>
-							<input type="text" id="nrOfPpl" placeholder="0" />
+							<form class="nrP nrPeople" name="form3" action="#">
+								<label for="nrOfPpl" class="nrOfPpl">Number of People</label>
+								<input type="text" id="nrOfPpl" placeholder="0" name="test3" />
+							</form>
 						</div>
 						<div class="bill__result">
 							<div class="bill__result_inner">
@@ -53,7 +59,7 @@
 										<p class="perPersonSum">0.00</p>
 									</div>
 								</div>
-								<button class="resetBtn" type="reset">RESET</button>
+								<button class="resetBtn" type="button">RESET</button>
 							</div>
 						</div>
 					</div>
