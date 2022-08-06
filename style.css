@@ -36,9 +36,16 @@ section {
 form{
    position: relative;
 }
-.billForm::after{
+.billFormEmpty::after{
    position: absolute;
    content: "Can't be empty!";
+   top: 0;
+   right: 0;
+   color: brown;
+}
+.billFormNumbers::after{
+   position: absolute;
+   content: "Must be numbers!";
    top: 0;
    right: 0;
    color: brown;
@@ -106,7 +113,9 @@ form{
 #nrOfPpl:focus-visible {
 	outline: 2px solid var(--strongCyan);
 }
-
+.billOutline:focus-visible{
+   outline: 2px solid var(--strongCyan);
+}
 /* .tip__perc_cont {
 	display: flex;
 	flex-wrap: wrap;

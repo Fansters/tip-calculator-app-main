@@ -20,25 +20,25 @@
 					<div class="split__inner">
 						<div class="bill__calc">
 							<div class="bill__input_cont">
-								<form class="billF billForm" name="form1" action="#">
+								<form class="billF" name="form1" action="#">
 									<label for="billAmount" class="split__bill">Bill</label>
-									<input type="text" id="billAmount" placeholder="0" name="test1" onchange="validateBill()" />
+									<input type="text" id="billAmount" placeholder="0" name="test1" onchange="validateBill()" class="inputForBill" />
 								</form>
 							</div>
 							<div class="tip__perc_cont">
-								<form class="tipC tipCustom" name="form2" action="#">
+								<form class="tipC" name="form2" action="#">
 									<label for="percentage" class="select__tip">Select Tip %</label>
 									<input type="button" value="5%" class="button" id="percentage" onClick="display('5%')" />
 									<input type="button" value="10%" class="button" onClick="display('10%')" />
 									<input type="button" value="15%" class="button" onClick="display('15%')" />
 									<input type="button" value="25%" class="button" onClick="display('25%')" />
 									<input type="button" value="50%" class="button" onClick="display('50%')" />
-									<input type="text" id="customAmount" class="customBtn" placeholder="Custom" name="test2" />
+									<input type="text" id="customAmount" class="customBtn" placeholder="Custom" name="test2" onchange="validatePercentage()" />
 								</form>
 							</div>
-							<form class="nrP nrPeople" name="form3" action="#">
+							<form class="nrP" name="form3" action="#">
 								<label for="nrOfPpl" class="nrOfPpl">Number of People</label>
-								<input type="text" id="nrOfPpl" placeholder="0" name="test3" />
+								<input type="text" id="nrOfPpl" placeholder="0" name="test3" class="peopleClass" onchange="validatePeople()" />
 							</form>
 						</div>
 						<div class="bill__result">
