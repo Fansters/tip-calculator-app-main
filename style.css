@@ -33,45 +33,45 @@ body {
 section {
 	margin-top: 3.125rem;
 }
-form{
-   position: relative;
+form {
+	position: relative;
 }
-.billFormEmpty::after{
-   position: absolute;
-   content: "Can't be empty!";
-   top: 0;
-   right: 0;
-   color: brown;
+.billFormEmpty::after {
+	position: absolute;
+	content: "Can't be empty!";
+	top: 0;
+	right: 0;
+	color: brown;
 }
-.billFormNumbers::after{
-   position: absolute;
-   content: "Must be numbers!";
-   top: 0;
-   right: 0;
-   color: brown;
+.billFormNumbers::after {
+	position: absolute;
+	content: "Must be numbers!";
+	top: 0;
+	right: 0;
+	color: brown;
 }
-.tipC{
-   display: flex;
+.tipC {
+	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	margin-bottom: 1.25rem;
 }
-.tipC label{
-   pointer-events: none;
+.tipC label {
+	pointer-events: none;
 }
-.tipCustom::after{
-   position: absolute;
-   content: "Numbers only!";
-   bottom: -10px;
-   right: 0;
-   color: brown;
+.tipCustom::after {
+	position: absolute;
+	content: "Numbers only!";
+	bottom: -10px;
+	right: 0;
+	color: brown;
 }
-.nrPeople::after{
-   position: absolute;
-   content: "Can't be empty!";
-   top: 0;
-   right: 0;
-   color: brown;
+.nrPeople::after {
+	position: absolute;
+	content: "Can't be empty!";
+	top: 0;
+	right: 0;
+	color: brown;
 }
 .logo {
 	text-align: center;
@@ -113,8 +113,8 @@ form{
 #nrOfPpl:focus-visible {
 	outline: 2px solid var(--strongCyan);
 }
-.billOutline:focus-visible{
-   outline: 2px solid var(--strongCyan);
+.billOutline:focus-visible {
+	outline: 2px solid var(--strongCyan);
 }
 /* .tip__perc_cont {
 	display: flex;
@@ -191,7 +191,8 @@ form{
 	margin: 0;
 	font-size: 0.875rem;
 }
-.perPersonSum {
+.perPersonTip,
+.perPersonTipSum {
 	font-size: 1.875rem;
 	margin: 0;
 	color: var(--strongCyan);
@@ -206,8 +207,8 @@ form{
 	font-size: 1.375rem;
 	font-family: "Space Mono", monospace;
 	border-radius: 4px;
-   transition: all .15s ease-in-out;
-   cursor: pointer;
+	transition: all 0.15s ease-in-out;
+	cursor: pointer;
 }
 
 /* CREDITS */
@@ -236,17 +237,17 @@ a:hover {
 /* @media only screen and (min-width: 768px) {} */
 
 @media only screen and (min-width: 992px) {
-   section{
-      margin-top: 10.125rem;
-   }
-   .logo{
-      margin-bottom: 5.4375rem;
-   }
+	section {
+		margin-top: 10.125rem;
+	}
+	.logo {
+		margin-bottom: 5.4375rem;
+	}
 	.split__container {
 		height: 30rem;
-      max-width: 57.5rem;
-      margin: 0 auto;
-      border-radius: 25px;
+		max-width: 57.5rem;
+		margin: 0 auto;
+		border-radius: 25px;
 	}
 	.split__inner {
 		display: flex;
@@ -273,7 +274,7 @@ a:hover {
 		border: none;
 		min-width: 7.825rem;
 		margin-bottom: 1rem;
-      transition: all .15s ease-in-out;
+		transition: all 0.15s ease-in-out;
 	}
 	.tip__perc_cont {
 		justify-content: space-between;
@@ -282,12 +283,12 @@ a:hover {
 	.tip__perc_cont .customBtn {
 		width: 7.825rem;
 	}
-    .button:hover{
-      background-color: var(--strongCyan);
-   }
-   .resetBtn:hover{
-      background-color: var(--lightGrayishCyan);
-   }
+	.button:hover {
+		background-color: var(--strongCyan);
+	}
+	.resetBtn:hover {
+		background-color: var(--lightGrayishCyan);
+	}
 }
 
 /* @media only screen and (min-width: 1200px) {} */

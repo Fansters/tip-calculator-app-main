@@ -20,7 +20,7 @@
 					<div class="split__inner">
 						<div class="bill__calc">
 							<div class="bill__input_cont">
-								<form class="billF" name="form1" action="#">
+								<form onsubmit="return false;" class="billF" name="form1" action="#">
 									<label for="billAmount" class="split__bill">Bill</label>
 									<input type="text" id="billAmount" placeholder="0" name="test1" onchange="validateBill()" class="inputForBill" />
 								</form>
@@ -28,8 +28,8 @@
 							<div class="tip__perc_cont">
 								<form class="tipC" name="form2" action="#">
 									<label for="percentage" class="select__tip">Select Tip %</label>
-									<input type="button" value="5%" class="button" id="percentage" onClick="display('5%')" />
-									<input type="button" value="10%" class="button" onClick="display('10%')" />
+									<input  type="button" value="5%" class="button" id="percentage"  />
+									<input type="button" value="10%" class="button" />
 									<input type="button" value="15%" class="button" onClick="display('15%')" />
 									<input type="button" value="25%" class="button" onClick="display('25%')" />
 									<input type="button" value="50%" class="button" onClick="display('50%')" />
@@ -49,14 +49,14 @@
 											<p class="bill__tipAmount">Tip Amount</p>
 											<p class="perPerson">/ person</p>
 										</div>
-										<p class="perPersonSum">0.00</p>
+										<p class="perPersonTip">0.00</p>
 									</div>
 									<div class="flex__cont">
 										<div class="amountPerson">
 											<p class="bill__tipAmount">Total</p>
 											<p class="perPerson">/ person</p>
 										</div>
-										<p class="perPersonSum">0.00</p>
+										<p class="perPersonTipSum">0.00</p>
 									</div>
 								</div>
 								<button class="resetBtn" type="button">RESET</button>

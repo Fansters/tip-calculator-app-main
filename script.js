@@ -8,8 +8,24 @@ const peopleCountInput = document.getElementById('nrOfPpl');
 const peopleCountForm = document.querySelector('.nrP');
 const peopleCountClass = document.querySelector('.peopleClass');
 const resetBtn = document.querySelector('.resetBtn');
+const forms = document.getElementsByTagName('form');
+const perPersonTipSum = document.querySelector('.perPersonTipSum');
+const perPersonTip = document.querySelector('.perPersonTip');
 
+billInput.addEventListener('change', calculateTip);
 
+function calculateTip() {
+   let bill = parseFloat(billInput.value);
+   let tipPerc = parseInt(customInput.value);
+   let numOfPpl = parseInt(peopleCountInput.value);
+   console.log(typeof bill, typeof tipPerc, typeof numOfPpl);
+
+   billInput.value = bill.toFixed(2);
+   // customInput.value = tipPerc; 
+   perPersonTip.textContent = (bill * tipPerc) / 100;
+   perPersonTipSum.textContent = parseInt(perPersonTip.textContent) + bill;
+
+}
 
 
 init = () => {
@@ -22,7 +38,7 @@ const validateBill = (inputText) => {
    inputText = document.form1.test1;
    const decimal = /^[-+]?[0-9]+\.[0-9]+$/;
    const numbers = /^[0-9]+$/;
-   console.log(inputText.value);
+   // console.log(inputText.value);
    if (inputText.value.length == 0) {
       billForm.classList.remove('billFormNumbers')
       billForm.classList.add('billFormEmpty')
@@ -46,7 +62,7 @@ const validatePercentage = (inputText) => {
    inputText = document.form2.test2;
    const decimal = /^[-+]?[0-9]+\.[0-9]+$/;
    const numbers = /^[0-9]+$/;
-   console.log(inputText.value);
+   // console.log(inputText.value);
    if (inputText.value.length == 0 || inputText.value.match(numbers) || inputText.value.match(decimal)) {
       customPercForm.classList.remove('tipCustom')
       customPercClass.style.removeProperty('outline');
@@ -61,7 +77,6 @@ const validatePercentage = (inputText) => {
 const validatePeople = (inputText) => {
    inputText = document.form3.test3;
    const numbers = /^[0-9]+$/;
-   console.log(inputText.value);
    if (inputText.value.length == 0) {
       peopleCountForm.classList.remove('billFormNumbers')
       peopleCountForm.classList.add('billFormEmpty')
@@ -91,3 +106,27 @@ resetBtn.addEventListener('click', () => {
    peopleCountForm.classList.remove('billFormEmpty')
    peopleCountClass.style.removeProperty('outline');
 })
+// console.log(perPersonTip.value);
+
+// forms.submit((e) => {
+//    e.preventDefault();
+// });
+
+
+// const init = function () {
+      //    scores = [0, 0];
+      //    currentScore = 0;
+      //    activePlayer = 0;
+      //    playing = true;
+       
+      //    score0El.textContent = 0;
+      //    score1El.textContent = 0;
+      //    current0El.textContent = 0;
+      //    current1El.textContent = 0;
+       
+      //    diceEl.classList.add('hidden');
+      //    player0El.classList.remove('player--winner');
+      //    player1El.classList.remove('player--winner');
+      //    player0El.classList.add('player--active');
+      //    player1El.classList.remove('player--active');
+      //  };
