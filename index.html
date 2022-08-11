@@ -22,7 +22,7 @@
 							<div class="bill__input_cont">
 								<form onsubmit="return false;" class="billF" name="form1" action="#">
 									<label for="billAmount" class="split__bill">Bill</label>
-									<input type="text" id="billAmount" placeholder="0" name="test1" onchange="validateBill()" class="inputForBill" />
+									<input type="text" id="billAmount" placeholder="0" name="test1" class="inputForBill" />
 								</form>
 							</div>
 							<div class="tip__perc_cont">
@@ -33,12 +33,12 @@
 									<input type="button" value="15%" class="button" onClick="display('15%')" />
 									<input type="button" value="25%" class="button" onClick="display('25%')" />
 									<input type="button" value="50%" class="button" onClick="display('50%')" />
-									<input type="text" id="customAmount" class="customBtn" placeholder="Custom" name="test2" onchange="validatePercentage()" />
+									<input type="text" id="customAmount" class="customBtn" placeholder="Custom" name="test2" onchange="someFnc()" />
 								</form>
 							</div>
 							<form class="nrP" name="form3" action="#">
 								<label for="nrOfPpl" class="nrOfPpl">Number of People</label>
-								<input type="text" id="nrOfPpl" placeholder="0" name="test3" class="peopleClass" onchange="validatePeople()" />
+								<input type="text" id="nrOfPpl" placeholder="0" name="test3" class="peopleClass" onchange="someFnc()" />
 							</form>
 						</div>
 						<div class="bill__result">

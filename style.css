@@ -50,6 +50,13 @@ form {
 	right: 0;
 	color: brown;
 }
+.billFormNumbersNot::after {
+	position: absolute;
+	content: "Can't be zero!";
+	top: 0;
+	right: 0;
+	color: brown;
+}
 .tipC {
 	display: flex;
 	flex-wrap: wrap;
