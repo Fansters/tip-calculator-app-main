@@ -11,22 +11,46 @@ const resetBtn = document.querySelector(".resetBtn");
 const forms = document.getElementsByTagName("form");
 const perPersonTipSum = document.querySelector(".perPersonTipSum");
 const perPersonTip = document.querySelector(".perPersonTip");
+const btnCont = document.getElementById('formID')
+const numberButtons = document.querySelectorAll('[data-number]');
 
 
 
+
+const buttonEl = btnCont.getElementsByClassName('button');
+for (let i = 0; i < buttonEl.length; i++) {
+   buttonEl[i].addEventListener("click", function () {
+      let current = document.getElementsByClassName("active");
+      // If there's no active class
+      if (current.length > 0) {
+         current[0].className = current[0].className.replace(" active", "");
+      }
+      // Add the active class to the current/clicked button
+      this.className += " active";
+   });
+}
 init = () => {
    (billInput.value = ""), (customInput.value = ""), (peopleCountInput.value = "");
 };
 window.onload = init;
 
 function someFnc() {
-   let clickedBtn;
    // bill !empty and num verification
    console.log('new func');
+   let btnNumber;
    let tipOne, tipAll;
    let bill = parseFloat(billInput.value);
    let tipPerc = parseInt(customInput.value);
+
    let numOfPpl = parseInt(peopleCountInput.value);
+   numberButtons.forEach(b => {
+      b.addEventListener('click', () => {
+         btnNumber = b.innerText;
+         btnNumber = btnNumber.substring(0, btnNumber.length - 1);
+         console.log(btnNumber);
+         // calculator.updateDisplay()
+      })
+   })
 
    const validateBill = (inputText) => {
       inputText = document.form1.test1;

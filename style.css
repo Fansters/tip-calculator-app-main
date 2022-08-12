@@ -80,6 +80,7 @@ form {
 	right: 0;
 	color: brown;
 }
+
 .logo {
 	text-align: center;
 	margin-bottom: 2.5rem;
@@ -152,6 +153,10 @@ form {
 	border-radius: 4px;
 	font-weight: normal;
 	font-family: "Space Mono", monospace;
+}
+.tip__perc_cont .active {
+	background-color: var(--lightGrayishCyan);
+	color: var(--veryDarkCyan);
 }
 .tip__perc_cont input:nth-child(even) {
 	margin-right: 1rem;
@@ -291,7 +296,8 @@ a:hover {
 		width: 7.825rem;
 	}
 	.button:hover {
-		background-color: var(--strongCyan);
+		background-color: var(--lightGrayishCyan);
+      color: var(--veryDarkCyan);
 	}
 	.resetBtn:hover {
 		background-color: var(--lightGrayishCyan);
