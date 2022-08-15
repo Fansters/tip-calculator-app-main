@@ -16,7 +16,7 @@ const numberButtons = document.querySelectorAll('[data-number]');
 
 
 
-
+// active class
 const buttonEl = btnCont.getElementsByClassName('button');
 for (let i = 0; i < buttonEl.length; i++) {
    buttonEl[i].addEventListener("click", function () {
@@ -39,15 +39,16 @@ function someFnc() {
    console.log('new func');
    let btnNumber;
    let tipOne, tipAll;
-   let bill = parseFloat(billInput.value);
-   let tipPerc = parseInt(customInput.value);
+   let bill = Number(billInput.value);
+   let tipPerc = Number(customInput.value);
+   let numOfPpl = Number(peopleCountInput.value);
 
-   let numOfPpl = parseInt(peopleCountInput.value);
+   // 
    numberButtons.forEach(b => {
       b.addEventListener('click', () => {
          btnNumber = b.innerText;
          btnNumber = btnNumber.substring(0, btnNumber.length - 1);
-         console.log(btnNumber);
+         console.log(Number(btnNumber));
          // calculator.updateDisplay()
       })
    })
@@ -62,6 +63,7 @@ function someFnc() {
          billInputClass.style.outline = "2px solid brown";
          return false;
       }
+
       if (inputText.value.match(numbers) || inputText.value.match(decimal)) {
          billForm.classList.remove("billFormNumbersNot");
          billForm.classList.remove("billFormNumbers");
@@ -69,16 +71,23 @@ function someFnc() {
          billInputClass.style.removeProperty("outline");
          console.log(bill, tipPerc, numOfPpl);
          billInput.value = bill.toFixed(2);
+
          console.log(tipPerc, numOfPpl);
          if (isNaN(tipPerc) || isNaN(numOfPpl)) {
             console.log('false');
             return false
          } else {
             console.log('true');
-            tipOne = ((bill * tipPerc) / 100 / numOfPpl).toFixed(2)
-            tipAll = ((Number(tipOne * numOfPpl) + bill) / numOfPpl).toFixed(2)
-            perPersonTip.textContent = tipOne;
-            perPersonTipSum.textContent = tipAll;
+            if (inputText.value > 0) {
+               tipOne = ((bill * tipPerc) / 100 / numOfPpl).toFixed(2)
+               tipAll = ((Number(tipOne * numOfPpl) + bill) / numOfPpl).toFixed(2)
+               perPersonTip.textContent = tipOne;
+               perPersonTipSum.textContent = tipAll;
+            } else {
+               perPersonTip.textContent = '0.00';
+               perPersonTipSum.textContent = '0.00';
+
+            }
          }
          return true;
       } else {
@@ -86,7 +95,6 @@ function someFnc() {
          billForm.classList.add("billFormEmpty");
          billInputClass.style.outline = "2px solid brown";
          console.log('else false');
-         inputText.value = '0'
       }
    };
    const validatePercentage = (inputText) => {
@@ -100,11 +108,17 @@ function someFnc() {
             console.log('false');
             return false
          } else {
-            console.log('true', bill);
-            tipOne = ((bill * tipPerc) / 100 / numOfPpl).toFixed(2)
-            tipAll = ((Number(tipOne * numOfPpl) + bill) / numOfPpl).toFixed(2)
-            perPersonTip.textContent = tipOne;
-            perPersonTipSum.textContent = tipAll;
+            console.log('true', bill, numOfPpl);
+            if (inputText.value > 0) {
+               tipOne = ((bill * tipPerc) / 100 / numOfPpl).toFixed(2)
+               tipAll = ((Number(tipOne * numOfPpl) + bill) / numOfPpl).toFixed(2)
+               perPersonTip.textContent = tipOne;
+               perPersonTipSum.textContent = tipAll;
+            } else {
+               perPersonTip.textContent = '0.00';
+               perPersonTipSum.textContent = '0.00';
+
+            }
          }
          return true;
       } else {
@@ -117,7 +131,7 @@ function someFnc() {
    const validatePeople = (inputText) => {
       inputText = document.form3.test3;
       const numbers = /^[0-9]+$/;
-      if (inputText.value.length == 0 || inputText.value == 0) {
+      if (inputText.value.length == 0 || inputText.value == 0 || inputText.value === 0) {
          peopleCountForm.classList.remove("billFormNumbers");
          peopleCountForm.classList.add("billFormEmpty");
          peopleCountClass.style.outline = "2px solid brown";
@@ -133,10 +147,16 @@ function someFnc() {
             return false
          } else {
             console.log('true');
-            tipOne = ((bill * tipPerc) / 100 / numOfPpl).toFixed(2)
-            tipAll = ((Number(tipOne * numOfPpl) + bill) / numOfPpl).toFixed(2)
-            perPersonTip.textContent = tipOne;
-            perPersonTipSum.textContent = tipAll;
+            if (inputText.value > 0) {
+               tipOne = ((bill * tipPerc) / 100 / numOfPpl).toFixed(2)
+               tipAll = ((Number(tipOne * numOfPpl) + bill) / numOfPpl).toFixed(2)
+               perPersonTip.textContent = tipOne;
+               perPersonTipSum.textContent = tipAll;
+            } else {
+               perPersonTip.textContent = '0.00';
+               perPersonTipSum.textContent = '0.00';
+
+            }
          }
          return true;
       } else {
