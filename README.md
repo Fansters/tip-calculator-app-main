@@ -12,7 +12,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Screenshot](https://github.com/Fansters/tip-calculator-app-main/tree/master/images/tipCalcPreview.jpg)
+![Screenshot](https://github.com/Fansters/tip-calculator-app-main/blob/master/images/tipCalcPreview.jpg)
 
 ### Links
 
