@@ -14,6 +14,7 @@ const btnCont = document.getElementById('formID')
 const numberButtons = document.querySelectorAll('[data-number]');
 let current = document.getElementsByClassName("active");
 let tipPerc, bill, numOfPpl, btnNumber;
+let tipOne, tipAll;
 const decimal = /^[-+]?[0-9]+\.[0-9]+$/;
 const numbers = /^[0-9]+$/;
 
@@ -51,7 +52,7 @@ for (let i = 0; i < buttonEl.length; i++) {
 
 // Whole onchange Functions
 const someFnc = () => {
-   let tipOne, tipAll;
+
    bill = Number(billInput.value);
    tipPerc = Number(customInput.value);
    numOfPpl = Number(peopleCountInput.value);

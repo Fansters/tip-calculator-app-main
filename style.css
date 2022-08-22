@@ -124,12 +124,6 @@ form {
 .billOutline:focus-visible {
 	outline: 2px solid var(--strongCyan);
 }
-/* .tip__perc_cont {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	margin-bottom: 1.25rem;
-} */
 
 .select__tip {
 	display: block;
@@ -240,14 +234,6 @@ a:hover {
 	color: tomato;
 }
 
-/* .tip__perc_cont .button:active {
-	background-color: var(--strongCyan);
-} */
-
-/* RESPONSIVE DESIGN */
-
-/* @media only screen and (min-width: 768px) {} */
-
 @media only screen and (min-width: 992px) {
 	section {
 		margin-top: 10.125rem;
@@ -297,11 +283,9 @@ a:hover {
 	}
 	.button:hover {
 		background-color: var(--lightGrayishCyan);
-      color: var(--veryDarkCyan);
+		color: var(--veryDarkCyan);
 	}
 	.resetBtn:hover {
 		background-color: var(--lightGrayishCyan);
 	}
 }
-
-/* @media only screen and (min-width: 1200px) {} */
